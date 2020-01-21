@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link, Element, scroller } from 'react-scroll';
 import {
     Card, Button, CardImg, CardTitle, CardText, CardColumns,
-    CardSubtitle, CardBody
+    CardSubtitle, CardBody,CardLink
 } from 'reactstrap';
 
 
@@ -16,13 +16,14 @@ class CardCom extends Component {
 
     render() {
         return (
-                <Card>
+                <Card style={{textAlign: "center"}}>
                     <CardImg top width="100%" src={this.props.imgurl} alt="Card image cap" />
                     <CardBody>
-                        <CardTitle>{this.props.title}</CardTitle>
+                        <CardTitle style={{fontSize: "25px"}}>{this.props.title}</CardTitle>
                         <CardSubtitle>{this.props.subtitle}</CardSubtitle>
                         <CardText>{this.props.text}</CardText>
-                        <Button>Button</Button>
+                        <CardLink style={{color: "#779ECB"}} href="#">Card Link</CardLink>
+                        <CardLink style={{color: "#779ECB"}} href="#">Another Link</CardLink>
                     </CardBody>
                 </Card>
 

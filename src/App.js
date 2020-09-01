@@ -9,6 +9,7 @@ import CardCom from './component/CardCom.jsx';
 import CardSkill from './component/CardSkill.jsx';
 import './App.css';
 import reim from './assets/img/react-cover.png';
+import axios from 'axios';
 
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
+    this.callapi = this.callapi.bind(this);
   }
 
   scrollToLanding = elem => {
@@ -28,6 +30,22 @@ class App extends Component {
       duration: 800,
       delay: 100,
       smooth: true,
+    })
+  }
+
+  callapi ()  {
+    var data = "grant_type=authorization_code&client_id=039bb643-891d-4abd-846d-a38c2e89adad&redirect_uri=https://test-scgdistpurchasing.nexterdigitals-dev.com/login&code=5zD0G9GbxEm2B9LRWX-_mA.fVlbsXz41wieGH39YWrB-NIDTcY.mbOVy93sAGq8cnJI4pjFjxlIJqrCt3d9Ee-jA5uKgP9mg1gzKqoU3adxxdm7V5f97g5AiAdVbOw2I7xizJuL0bZkYFDCexJbUsIbqWsTsZlOeVp_BEDYmhUR_KmtIQBh5OZeMiaA5hNn5ZOm_98LAtyRKNoOoccO6pJ8wb2TDjtYM-xGmZ0JIKynlwPqh4CT4rYLcC3AX5QkPKYm9Wc-7zpDq5Rh8ZBaG3Hv0NK-g2XEvI2OKGVY0MnI3tJeVQKdEpHySq8KL5DF3wLNwNvVXt2YaJS02V3T7WJx4agWpiFrb85UazoDcISHVYOfP68RJHfTGst4FgD15pucSYkWtA"
+    //axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
+    const headers = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      method: 'HEAD',
+		  mode: 'no-cors',
+    }
+    axios.post(`https://accessdev.scg.co.th/adfs/oauth2/token`, {data},headers)
+    .then(res => {
+      console.log(res);
     })
   }
 
@@ -107,8 +125,10 @@ class App extends Component {
               <span className="text-primary">  </span>
                 <span style={{color:"#70A1D7"}}>Klinpratoom</span>
               </h1>
-              <div className="subheading mb-5">Samutprakarn · Thailand · (085) 845-5652 · 
-            <a href="mailto:nanpipat.k@gmail.com"> nanpipat.k@gmail.com</a>
+              <div className="subheading mb-5">
+                <h3>Full Stack Developer</h3>
+                {/* Samutprakarn · Thailand · (085) 845-5652 · 
+            <a href="mailto:nanpipat.k@gmail.com"> nanpipat.k@gmail.com</a> */}
               </div>
               <p className="lead mb-5">Please call me "TOP". I'm a funny guy and love to do activity , got a leadership , serious when worker. I like to think of something new because it's unique. I always enjoy with problem and never give up until I can fix it.</p>
               <div className="social-icons">
@@ -124,6 +144,10 @@ class App extends Component {
                 <a href="mailto:nanpipat.k@gmail.com">
                   <i className="fa fa-envelope"></i>
                 </a>
+
+                {/* <button onClick={this.callapi}>
+                  asdsad
+                </button> */}
                 
               </div>
             </div>
@@ -219,6 +243,107 @@ class App extends Component {
             <div className="w-100">
               <h2 className="mb-5">Skills</h2>
 
+              <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div className="resume-content">
+                  <h3 className="mb-0">FRONT-END DEVELOPER </h3>
+                  <div className="subheading mt-3">
+                  <img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src={ require('./assets/img/al.png') } alt="" />
+                    Angular</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src={ require('./assets/img/ra.png') } alt="" />React</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src="https://www.chicagocomputerclasses.com/wp-content/uploads/2014/04/html5-css31.png" alt="" />HTML & CSS</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" alt="" />Bootstrap</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src="https://opencollective-production.s3.us-west-1.amazonaws.com/ada636e0-395b-11ea-8ab7-b3f0317bbc7c.png" alt="" />Material ui</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                </div>
+                <div className="resume-date text-md-right">
+                  <span style={{color:"#70A1D7"}}>March 2013 - Present</span>
+                </div>
+              </div>
+
+              <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div className="resume-content">
+                  <h3 className="mb-0">BACK-END DEVELOPER </h3>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src={ require('./assets/img/cs.png') } alt="" />C#, .Net Core, .NET framework</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src="https://www.blognone.com/sites/default/files/externals/723c801c90afd9aa844b3ce3d7f01f0b.png" alt="" />Node.js (Express.js)</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  {/* <div className="subheading mt-3">HTML & CSS</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3">Bootstrap</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3">Material ui</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p> */}
+                </div>
+                <div className="resume-date text-md-right">
+                  <span style={{color:"#70A1D7"}}>March 2013 - Present</span>
+                </div>
+              </div>
+
+              <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div className="resume-content">
+                  <h3 className="mb-0">Mobile Developer  </h3>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src="https://www.pngkit.com/png/full/222-2224799_react-native-development-react-native-logo-png.png" alt="" />React Native</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src="https://secure.meetupstatic.com/photos/event/d/a/3/7/600_477715863.jpeg" alt="" />IONIC </div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  {/* <div className="subheading mt-3">HTML & CSS</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3">Bootstrap</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3">Material ui</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p> */}
+                </div>
+                <div className="resume-date text-md-right">
+                  <span style={{color:"#70A1D7"}}>March 2013 - Present</span>
+                </div>
+              </div>
+
+              <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div className="resume-content">
+                  <h3 className="mb-0">Database System  </h3>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src="https://www.cloudhm.co.th/media/original_images/microsoft-sql-server_gYxfqsN.jpg" alt="" />SQL Server</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_502,h_518/https://keytotech.com/wp-content/uploads/2019/05/firebase.png" alt="" />Firebase (with Clound Functions)</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  {/* <div className="subheading mt-3">HTML & CSS</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3">Bootstrap</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3">Material ui</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p> */}
+                </div>
+                <div className="resume-date text-md-right">
+                  <span style={{color:"#70A1D7"}}>March 2013 - Present</span>
+                </div>
+              </div>
+
+              <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div className="resume-content">
+                  <h3 className="mb-0">DEV-OPS  </h3>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src="https://img2.thaipng.com/20180515/zxe/kisspng-jenkins-docker-continuous-delivery-installation-so-5afa799e222331.1197773615263645741398.jpg" alt="" />Jenkins</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3"><img className="mr-3" style={{borderRadius: "50%", width: "70px"}} src="https://pbs.twimg.com/profile_images/378800000036582527/5aa73901ac270ac6e8776241b04ad3d9_400x400.png" alt="" />Octopus Deploy</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  {/* <div className="subheading mt-3">HTML & CSS</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3">Bootstrap</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <div className="subheading mt-3">Material ui</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p> */}
+                </div>
+                <div className="resume-date text-md-right">
+                  <span style={{color:"#70A1D7"}}>March 2013 - Present</span>
+                </div>
+              </div>
+
+              
+
+              
+
               <div className="subheading mb-3">Programming Languages &amp; Tools</div>
               <ul className="list-inline dev-icons">
                 <li className="list-inline-item">
@@ -283,9 +408,11 @@ class App extends Component {
                 <CardColumns>
                   <CardCom
                     imgurl= {reim}
-                    title="Card title"
-                    subtitle=" "
-                    text="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.  natural lead-in to additional content. This content is a little bit longer."
+                    title="React Projrct"
+                    subtitle="develop and fix bug on React project."
+                    text="Develop and fixed bug on React project. /n in Admin console of CRG web application system"
+                    Link1D=""
+                    Link1=""
                   />
                   <CardCom
                     imgurl= {reim} 

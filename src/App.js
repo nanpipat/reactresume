@@ -344,7 +344,7 @@ class App extends Component {
 
               
 
-              <div className="subheading mb-3">Programming Languages &amp; Tools</div>
+              {/* <div className="subheading mb-3">Programming Languages &amp; Tools</div>
               <ul className="list-inline dev-icons">
                 <li className="list-inline-item">
                 <img style={{borderRadius: "50%", width: "70px"}} src={ require('./assets/img/cs.png') } alt="" />
@@ -385,7 +385,7 @@ class App extends Component {
               </ul>
               <br />
               <br />
-              <CardSkill />
+              <CardSkill /> */}
             </div>
           </section>
 

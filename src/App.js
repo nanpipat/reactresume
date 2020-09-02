@@ -79,7 +79,7 @@ class App extends Component {
       <div className="App">
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{backgroundColor: "#70A1D7"}} id="sideNav">
           <a className="navbar-brand js-scroll-trigger" onClick= {() => this.scrollToLanding('about')}>
-            <span style={{color:"white"}} className="d-block d-lg-none">Nanpipat Klinpratoom</span>
+            <span style={{color:"white",fontWeight:800,letterSpacing:".05rem",textTransform:"uppercase"}} className="d-block d-lg-none">Nanpipat Klinpratoom</span>
             <span className="d-none d-lg-block">
               <img className="img-fluid img-profile rounded-circle mx-auto mb-2" src={ require('./assets/img/avatar.jpg') } alt="" />
             </span>
@@ -105,12 +105,13 @@ class App extends Component {
                 <Link activeClass="active" style={{ cursor: "pointer" }} className="nav-link js-scroll-trigger" to="skills" spy={true} smooth={true} duration={500} >Skills</Link>
 
               </li>
+              
               <li className="nav-item">
-                <Link activeClass="active" style={{ cursor: "pointer" }} className="nav-link js-scroll-trigger" to="interests" spy={true} smooth={true} duration={500} >Interests</Link>
+                <Link activeClass="active" style={{ cursor: "pointer" }} className="nav-link js-scroll-trigger" to="awards" spy={true} smooth={true} duration={500} >WORKS</Link>
 
               </li>
               <li className="nav-item">
-                <Link activeClass="active" style={{ cursor: "pointer" }} className="nav-link js-scroll-trigger" to="awards" spy={true} smooth={true} duration={500} >Portfolio</Link>
+                <Link activeClass="active" style={{ cursor: "pointer" }} className="nav-link js-scroll-trigger" to="interests" spy={true} smooth={true} duration={500} >Interests</Link>
 
               </li>
             </ul>
@@ -161,45 +162,23 @@ class App extends Component {
 
               <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div className="resume-content">
-                  <h3 className="mb-0">Senior Web Developer</h3>
-                  <div className="subheading mb-3">Intelitec Solutions</div>
-                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                  <h3 className="mb-0">FULL STACK DEVELOPER</h3>
+                  <div className="subheading mb-3">Netcube Soft co., ltd</div>
+                  <p>Develop software, such as website, application, system, etc. Base language  in Back End is C#,.NET Core, .NET Framework and Base Front End is Angular Framework.</p>
                 </div>
                 <div className="resume-date text-md-right">
-                  <span style={{color:"#70A1D7"}}>March 2013 - Present</span>
+                  <span style={{color:"#70A1D7"}}>June 2018 - Present</span>
                 </div>
               </div>
 
               <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div className="resume-content">
-                  <h3 className="mb-0">Web Developer</h3>
-                  <div className="subheading mb-3">Intelitec Solutions</div>
-                  <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+                  <h3 className="mb-0">Freelance Developer</h3>
+                  <div className="subheading mb-3">Freelance</div>
+                  <p>Develop and Bug fixed Software , Application or Website by requirement. Don't expect language. Mostly is Web Developer </p>
                 </div>
                 <div className="resume-date text-md-right">
-                  <span style={{color:"#70A1D7"}}>December 2011 - March 2013</span>
-                </div>
-              </div>
-
-              <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div className="resume-content">
-                  <h3 className="mb-0">Junior Web Designer</h3>
-                  <div className="subheading mb-3">Shout! Media Productions</div>
-                  <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-                </div>
-                <div className="resume-date text-md-right">
-                  <span style={{color:"#70A1D7"}}>July 2010 - December 2011</span>
-                </div>
-              </div>
-
-              <div className="resume-item d-flex flex-column flex-md-row justify-content-between">
-                <div className="resume-content">
-                  <h3 className="mb-0">Web Design Intern</h3>
-                  <div className="subheading mb-3">Shout! Media Productions</div>
-                  <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-                </div>
-                <div className="resume-date text-md-right">
-                  <span style={{color:"#70A1D7"}}>September 2008 - June 2010</span>
+                  <span style={{color:"#70A1D7"}}>January 2019 - Present</span>
                 </div>
               </div>
 
@@ -391,19 +370,9 @@ class App extends Component {
 
           <hr className="m-0" />
 
-          <section className="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
-            <div className="w-100">
-              <h2 className="mb-5">Interests</h2>
-              <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-              <p className="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
-            </div>
-          </section>
-
-          <hr className="m-0" />
-
           <section className="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
             <div className="w-100">
-              <h2 className="mb-5">Portfolio</h2>
+              <h2 className="mb-5">WORKS</h2>
               <div className="row">
                 <CardColumns>
                   <CardCom
@@ -435,6 +404,16 @@ class App extends Component {
                   />
                 </CardColumns>
               </div>
+            </div>
+          </section>
+
+          <hr className="m-0" />
+
+          <section className="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
+            <div className="w-100">
+              <h2 className="mb-5">Interests</h2>
+              <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+              <p className="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
             </div>
           </section>
 

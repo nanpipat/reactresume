@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/reactresume/static/css/main.ea1dd63e.chunk.css",
-    "main.js": "/reactresume/static/js/main.f3fe03e7.chunk.js",
-    "main.js.map": "/reactresume/static/js/main.f3fe03e7.chunk.js.map",
+    "main.js": "/reactresume/static/js/main.9ce0c1a4.chunk.js",
+    "main.js.map": "/reactresume/static/js/main.9ce0c1a4.chunk.js.map",
     "runtime-main.js": "/reactresume/static/js/runtime-main.a7c4ff5a.js",
     "runtime-main.js.map": "/reactresume/static/js/runtime-main.a7c4ff5a.js.map",
-    "static/js/2.80faee62.chunk.js": "/reactresume/static/js/2.80faee62.chunk.js",
-    "static/js/2.80faee62.chunk.js.map": "/reactresume/static/js/2.80faee62.chunk.js.map",
+    "static/js/2.64f9a3cf.chunk.js": "/reactresume/static/js/2.64f9a3cf.chunk.js",
+    "static/js/2.64f9a3cf.chunk.js.map": "/reactresume/static/js/2.64f9a3cf.chunk.js.map",
     "index.html": "/reactresume/index.html",
-    "precache-manifest.5a1d40f59174859d48b9fb9044d42f08.js": "/reactresume/precache-manifest.5a1d40f59174859d48b9fb9044d42f08.js",
+    "precache-manifest.febdb255026a9996dc2dbcd8daec982e.js": "/reactresume/precache-manifest.febdb255026a9996dc2dbcd8daec982e.js",
     "service-worker.js": "/reactresume/service-worker.js",
     "static/css/main.ea1dd63e.chunk.css.map": "/reactresume/static/css/main.ea1dd63e.chunk.css.map",
     "static/media/avatar.jpg": "/reactresume/static/media/avatar.9b068bf0.jpg",
@@ -16,16 +16,14 @@
     "static/media/cs.png": "/reactresume/static/media/cs.e7b8fcd4.png",
     "static/media/fe.svg": "/reactresume/static/media/fe.dbb8096d.svg",
     "static/media/gs.svg": "/reactresume/static/media/gs.7eefccbc.svg",
-    "static/media/js.png": "/reactresume/static/media/js.36700bee.png",
     "static/media/login.svg": "/reactresume/static/media/login.9a76e74e.svg",
     "static/media/ra.png": "/reactresume/static/media/ra.47ce6e77.png",
-    "static/media/react-cover.png": "/reactresume/static/media/react-cover.6ddc15d3.png",
-    "static/media/sql.png": "/reactresume/static/media/sql.ecab18a5.png"
+    "static/media/react-cover.png": "/reactresume/static/media/react-cover.6ddc15d3.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a7c4ff5a.js",
-    "static/js/2.80faee62.chunk.js",
+    "static/js/2.64f9a3cf.chunk.js",
     "static/css/main.ea1dd63e.chunk.css",
-    "static/js/main.f3fe03e7.chunk.js"
+    "static/js/main.9ce0c1a4.chunk.js"
   ]
 }
